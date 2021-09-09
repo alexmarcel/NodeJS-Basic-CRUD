@@ -1,0 +1,16 @@
+<% for(var i=0; i<records.length; i++){ %>
+<tr>
+    <td><%= records[i].name %></td>
+    <td><%= records[i].email %></td>
+    <td><%= records[i].phone %></td>
+    <td><%= records[i].status %></td>
+    <td><div class="gap-2 d-flex justify-content-md-end">
+        <a href="/update-record?id=<%= records[i]._id %>" class="btn btn-primary btn-sm update">
+            <i class="bi bi-pencil-square"></i>
+        </a>
+        <a class="btn btn-primary btn-sm delete" data-id=<%= records[i]._id %>>
+            <i class="fa fa-trash-alt"></i>
+        </a></div>
+    </td>
+</tr>
+<% } %>

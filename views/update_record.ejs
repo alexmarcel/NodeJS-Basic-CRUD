@@ -1,0 +1,60 @@
+<!-- include header -->
+<%- include('include/_header')%>
+<!-- /include header -->
+
+<!-- Main Site -->
+<main id="site-main">
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Update Record</h5>
+                    <p class="card-text">Form to update record.</p>
+                </div>
+                <div class="card-body">
+                    <!-- Table -->
+                    <form method="POST" id="update_record">
+                        <div class="new_record">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="hidden" name="id" value="<%= record._id %>">
+                                <input type="text" name="name" class="form-control" value="<%= record.name %>" placeholder="your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" name="email" class="form-control" value="<%= record.email %>" placeholder="youremail@example.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="text" name="phone" class="form-control" value="<%= record.phone %>" placeholder="phone number" required>
+                            </div>
+                            <div class="mb-3">
+                                <div>
+                                    <label class="form-label">Status</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="status" id="radio-1" value="active" <%= record.status == 'active' ? 'checked' : '' %> required>
+                                    <label class="form-check-label" for="radio-1">Active</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="status" id="radio-2" value="inactive" <%= record.status == 'inactive' ? 'checked' : '' %> >
+                                    <label class="form-check-label" for="radio-2">Inactive</label>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="submit" class="btn btn-primary update">Update</button>
+                                <a href="/" class="btn btn-secondary">Cancel
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer')%>
+<!-- /include footer -->

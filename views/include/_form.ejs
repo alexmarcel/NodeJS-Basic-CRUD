@@ -1,0 +1,35 @@
+<form action="/api/records" method="POST" id="add_record">
+    <div class="new_record">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" class="form-control" value="" placeholder="your name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" name="email" class="form-control" value="" placeholder="youremail@example.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" name="phone" class="form-control" value="" placeholder="phone number" required>
+        </div>
+        <div class="mb-3">
+            <div>
+                <label class="form-label">Status</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="status" id="radio-1" value="active" required> 
+                <label class="form-check-label" for="radio-1">Active</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="status" id="radio-2" value="inactive">
+                <label class="form-check-label" for="radio-2">Inactive</label>
+            </div>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" class="btn btn-primary update">Submit</button>
+            <a href="/" class="btn btn-secondary">Cancel
+            </a>
+        </div>
+    </div>
+</form>
