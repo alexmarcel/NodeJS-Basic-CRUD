@@ -1,4 +1,4 @@
-# nodejs_basic_crud
+# nodejs-basic-crud
 NodeJS basic CRUD with MongoDB and Bootstrap.
 
 Installation :
